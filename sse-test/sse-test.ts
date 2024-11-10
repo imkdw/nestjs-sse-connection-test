@@ -99,7 +99,6 @@ class SSELoadTest {
 // 메인 실행
 const test = new SSELoadTest('http://localhost:8080', 10000, 60); // 1분 동안 10000개의 커넥션 생성
 
-// Ctrl+C 핸들링
 process.on('SIGINT', async () => {
   await test.shutdown();
   process.exit(0);
